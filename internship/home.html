@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <style>
+       body{
+           overflow: scroll;
+       }
+    </style> <!-- style for body-->
+    <style>
+        #header1 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            height: 40px;
+            width: 100%;
+            background-color: whitesmoke;
+        }
+        #main-text {
+            font-family:sans-serif;
+            text-align: center;
+            position: absolute;
+            top: 4px;
+            left: 0;
+            width: 100%;
+            padding-top: 10px;
+            font-size: small;
+        }
+        .wix-logo {
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            top: -5px;
+        }
+        #start-now {
+            border-color: purple;
+            padding: 6px;
+            background-color: white;
+            width: 80px;
+            color: purple;
+            top: 1px;
+            border-radius: 20px;
+            border-width: thin;
+            border-style: solid;
+            position: absolute;
+            margin-left: 3px;
+        }
+        #line1 {
+            position: absolute;
+            top: 32px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: purple;
+            opacity: 0.8;
+        }
+        #header1:hover{
+            background-color: white;
+            cursor: pointer;
+        }
+    </style> <!-- style for WIX.com-->
+    <style>
+        #main-menu{
+            position: fixed;
+            top: 43px;
+            left:0;
+            width: 100%;
+            height: 70px;
+            z-index: 2;
+            background-color: #343132;
+            display: flex;
+            justify-content: center;
+        }
+        #menu{
+            width: 900px;
+            height: 40px;
+            margin-top: 20px;
+            background-color:  #343132;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .menu-items {
+            color: #d1d1d0;
+            padding: 10px;
+            font-size: small;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: lighter;
+        }
+        #book-now{
+            background-color: #14070e;
+            border-color: white;
+            border-width: thin;
+            color: white;
+            font-family: 'Source Sans Pro', sans-serif;
+            height: 38px;
+            font-weight: bold;
+            width: 120px;
+            font-size: smaller;
+            border-style: solid;
+            margin-top: -2px;
+        }
+        #book-now:hover{
+            background-color: white;
+            color: black;
+            cursor: pointer;
+            transition: background-color 0.5s;
+        }
+        .menu-items:hover{
+            transition: color 0.5s;
+            color: darkgray;
+            cursor: pointer;
+        }
+        #home{
+            color: darkgrey;
+        }
+    </style> <!--style for menu -->
+    <style>
+        #ferofly{
+            position: absolute;
+            top: 180px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+        }
+        #ferofly-text1{
+            width: 100%;
+            background-color: white;
+            text-align: center;
+            font-style: italic;
+            font-size: xx-large;
+            position: absolute;
+            top: 10px;
+        }
+        #ferofly-text2{
+            width: 100%;
+            background: white;
+            position: absolute;
+            top: 60px;
+            font-style: italic;
+            font-size: large;
+            text-align: center;
+        }
+        .text-line{
+            background-color: darkgray;
+            width: 10px;
+            height: 1px;
+        }
+
+        #text-line1{
+            position: absolute;
+            top: 63px;
+            left: 600px;
+        }
+        #text-line2{
+            position: absolute;
+            top: 63px;
+            left:770px;
+        }
+    </style> <!-- style for ferofly-->
+    <style> <!-- -->
+        #background-image{
+            position: absolute;
+            height: 500px;
+            width: 100%;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            top: 350px;
+        }
+        #image{
+            position: absolute;
+            height: 520px;
+            width: 850px;
+        }
+    </style> <!-- style for image-->
+    <style>
+        #date-body{
+            position: absolute;
+            top: 900px;
+            left: 0;
+            height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        #dates{
+            display: grid;
+            grid-template-columns: 200px 200px 60px 60px 200px;
+            grid-column-gap: 10px;
+            grid-row-gap: 2px;
+            grid-template-rows: 15px 25px;
+        }
+        .lbl{
+            font-size: smaller;
+            color: darkgrey;
+            font-family: 'Source Sans Pro', sans-serif;
+
+        }
+        .inputs{
+            border-color: #d1d1d0;
+            border-width: thin;
+            color: #474445;
+            padding: 5px;
+            font-family: 'Source Sans Pro', sans-serif;
+
+        }
+        #checkin-lbl{
+            grid-area: 1/1/2/2;
+        }
+        #checkout-lbl{
+            grid-area: 1/2/2/3;
+        }
+        #adult-lbl{
+            grid-area: 1/3/2/4;
+        }
+        #kids-lbl{
+            grid-area: 1/4/2/5;
+        }
+        #checkin{
+            grid-area: 2/1/2/2;
+        }
+        #checkout{
+            grid-area: 2/2/2/3;
+        }
+
+        #adults{
+            grid-area: 2/3/2/4;
+        }
+
+        #kids{
+            grid-area: 2/4/2/5;
+        }
+        #search{
+            grid-area: 2/5/2/5;
+            border-color: black;
+            border-width: thin;
+            border-style: solid;
+            text-align: center;
+            font-size: small;
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: black;
+            color: white;
+            padding-top: 2px;
+        }
+        #search:hover{
+            cursor: pointer;
+        }
+    </style> <!-- style for dates -->
+    <style> <!-- -->
+        #main-para-body{
+            width: 100%;
+            position: absolute;
+            top: 1100px;
+            left: 0;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            color: slategray;
+        }
+        #about-para{
+            left: 0;
+            font-family: 'Source Sans Pro', sans-serif;
+
+            display: grid;
+            grid-template-rows: 20px 200px;
+            grid-row-gap: 30px;
+            grid-template-columns: 600px;
+
+        }
+        #about-lbl{
+            text-align: center;
+            font-family: 'Source Sans Pro', sans-serif;
+            grid-area: 1/1/1/1;
+            font-size: xx-large;
+            color: black;
+        }
+        #para{
+            grid-area: 2/1/2/1;
+            font-style: italic;
+            text-align: center;
+            color : #8d8d8c;
+        }
+    </style> <!-- style for about-->
+    <style>
+        #rooms-main{
+            position: absolute;
+            top: 1450px;
+            left: 0;
+            width: 100%;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+        }
+        #room-img-main{
+            position: relative;
+            width: 850px;
+            background-color: red;
+        }
+        #room-img{
+            height: 600px;
+            z-index: 2;
+        }
+        #img-para{
+            position: absolute;
+            top: 125px;
+            left: 280px;
+            background-color: white;
+            height: 270px;
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            width: 340px;
+            text-align: center;
+            z-index: 1;
+            border-color: black;
+            border-style: solid;
+            border-width: thin;
+        }
+        #our-rooms {
+            color: black;
+            font-size: x-large;
+            font-family: 'Source Sans Pro', sans-serif;
+            margin-bottom: 30px;
+        }
+        #para-info{
+            margin-top: 50px;
+            color: #8d8d8c;
+            font-family: 'Source Sans Pro', sans-serif;
+
+            margin-bottom: 50px;
+            font-size: medium;
+            font-style: italic;
+            width: 280px;
+            margin-left: 20px;
+        }
+        #book-a-room{
+            border-width: thin;
+            border-color: black;
+            padding: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            border-style: solid;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: small;
+
+        }
+    </style> <!-- style for rooms-->
+    <style>
+        #services-main-container{
+            position: absolute;
+            top: 2200px;
+            left: 0;
+            height: 550px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        #services-main {
+            display: grid;
+            grid-template-rows: 50px 100px 50px 100px 100px 50px 100px;
+            grid-template-columns: 300px 300px 300px;
+            grid-row-gap: 20px;
+            grid-column-gap: 30px;
+            font-family: 'Source Sans Pro', sans-serif;
+
+        }
+        #services-lbl{
+            grid-area: 1/2/1/2;
+            text-align: center;
+            font-size: xx-large;
+
+        }
+        #breakfast{
+            grid-area: 2/1/2/2;
+            margin: 0 auto;
+        }
+        #garden{
+            margin: 0 auto;
+            grid-area: 2/2/2/3;
+        }
+        #pool{
+            margin: 0 auto;
+            grid-area: 2/3/2/3;
+        }
+        #wifi{
+            margin: 0 auto;
+            grid-area: 5/1/5/2;
+        }
+        #housekeeping{
+            margin: 0 auto;
+            grid-area: 5/2/5/3;
+        }
+        #dining{
+            margin: 0 auto;
+            grid-area: 5/3/5/3;
+        }
+        #breakfast-lbl{
+            grid-area: 3/1/3/2;
+            text-align: center;
+            font-weight: bold;
+        }
+        #garden-lbl{
+            grid-area: 3/2/3/3;
+            text-align: center;
+            font-weight: bold;
+        }
+        #pool-lbl{
+            grid-area: 3/3/3/3;
+            text-align: center;
+            font-weight: bold;
+        }
+        #wifi-lbl{
+            grid-area: 6/1/6/2;
+            text-align: center;
+            font-weight: bold;
+        }
+        #housekeeping-lbl{
+            grid-area: 6/2/6/3;
+            text-align: center;
+            font-weight: bold;
+        }
+        #dining-lbl{
+            grid-area: 6/3/6/3;
+            text-align: center;
+            font-weight: bold;
+        }
+        #breakfast-desc{
+            grid-area: 4/1/4/2;
+            font-style: italic;
+            text-align: center;
+        }
+        #garden-desc{
+            grid-area: 4/2/4/3;
+            font-style: italic;
+            text-align: center;
+        }
+        #pool-desc{
+            grid-area: 4/3/4/3;
+            font-style: italic;
+            text-align: center;
+        }
+        #wifi-desc{
+            grid-area: 7/1/7/2;
+            font-style: italic;
+            text-align: center;
+        }
+        #housekeeping-desc{
+            grid-area: 7/2/7/3;
+            font-style: italic;
+            text-align: center;
+        }
+        #dining-desc{
+            grid-area: 7/3/7/3;
+            font-style: italic;
+            text-align: center;
+        }
+    </style> <!-- style for services-->
+    <style>
+        #gallery-main-container{
+            position: absolute;
+            top: 3000px;
+            left: 0;
+            height: 500px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+        }
+        #gallery-main{
+            display: grid;
+            grid-template-rows: 50px 550px;
+            grid-template-columns: 300px 300px 300px;
+            grid-column-gap: 10px;
+            grid-row-gap: 20px;
+            font-family: 'Source Sans Pro', sans-serif;
+
+        }
+        #gallery-lbl{
+            grid-area: 1/2/1/2;
+            text-align: center;
+            font-size: xx-large;
+        }
+        #gallery-img1{
+            grid-area: 2/1/2/2;
+            height: 550px;
+            width: 300px;
+        }
+        #gallery-img2{
+            grid-area: 2/2/2/3;
+            height: 550px;
+            width: 300px;
+        }
+        #gallery-img3{
+            grid-area: 2/3/2/3;
+            width: 300px;
+            height: 550px;
+        }
+
+    </style> <!-- style for gallery-->
+    <style>
+        #things-to-do-container{
+            position: absolute;
+            top: 3750px;
+            left: 0;
+            width: 100%;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+        }
+        #things-to-do-main{
+            display: grid;
+            grid-template-rows: 60px 30px 70px 30px 50px;
+            grid-template-columns: 300px 300px 300px;
+            font-family: 'Source Sans Pro', sans-serif;
+            grid-row-gap: 20px;
+            grid-column-gap: 30px;
+        }
+        #things-to-do{
+            grid-area: 1/2/1/2;
+            text-align: center;
+            font-size: x-large;
+        }
+        #Wineries-lbl{
+            text-align: center;
+            grid-area: 2/1/2/2;
+                   font-weight: bold;
+ }
+        #Cultural-lbl{
+            text-align: center;
+            grid-area: 2/2/2/3;
+                    font-weight: bold;
+}
+        #Market-lbl {
+            text-align: center;
+            grid-area: 2/3/2/3;
+                    font-weight: bold;
+}
+        #Leisure-lbl{
+            text-align: center;
+            grid-area: 4/1/4/2;
+                    font-weight: bold;
+}
+        #Birds-lbl{
+            text-align: center;
+            grid-area: 4/2/4/3;
+                    font-weight: bold;
+}
+        #Horse-lbl{
+            text-align: center;
+            grid-area: 4/3/4/4;
+                    font-weight: bold;
+}
+        #Wineries-desc{
+            text-align: center;
+            font-style: italic;
+            grid-area: 3/1/3/2;
+        }
+        #Cultural-desc{
+            text-align: center;
+            font-style: italic;
+            grid-area: 3/2/3/3;
+        }
+        #Market-desc{
+            text-align: center;
+            font-style: italic;
+            grid-area: 3/3/3/3;
+        }
+        #Leisure-desc{
+            text-align: center;
+            font-style: italic;
+            grid-area: 5/1/5/2;
+        }
+        #Birds-desc{
+            text-align: center;
+            font-style: italic;
+            grid-area: 5/2/5/3;
+        }
+        #Horse-desc{
+            text-align: center;
+            font-style: italic;
+            grid-area: 5/3/5/3;
+        }
+    </style> <!-- style for things to do-->
+    <style>
+        #guest-container{
+            position: absolute;
+            top: 4150px;
+            left: 0;
+            height: 500px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        #guest-main{
+            position: relative;
+            width: 850px;
+            height: 620px;
+
+        }
+        #review-img{
+            height: 600px;
+        }
+        #review-body{
+            position: absolute;
+            top:120px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            padding-left: 30px;
+            padding-right: 30px;
+            left: 275px;
+            background-color: white;
+            border-color: black;
+            border-style: solid;
+            border-width: thin;
+            text-align: center;
+            font-family: sans-serif;
+            height: 275px;
+            width: 320px;
+        }
+        #guest-review-lbl{
+            font-size: xx-large;
+            display: block;
+            margin-top: 20px;
+            font-family: 'Source Sans Pro', sans-serif;
+
+        }
+        #extra{
+            margin-top: 30px;
+        }
+        #review-info{
+            font-style: italic;
+            font-family: 'Source Sans Pro', sans-serif;
+
+        }
+        .btns{
+            height:6px;
+            width: 6px;
+            border-width: 0;
+            border-style: solid;
+            border-color: #8d8d8c;
+            background-color: #14070e;
+            border-radius: 5px;
+        }
+
+        #r1{
+            position: absolute;
+            margin-right: 10px;
+            margin-left: -20px;
+            margin-top: 40px;
+            opacity: 0.5;
+        }
+        #r2{
+            position: absolute;
+            margin-right: 10px;
+            opacity: 1;
+            margin-top: 40px;
+            margin-left: 0;
+        }
+        #r3{
+            position: absolute;
+            margin-top: 40px;
+            opacity:1;
+            margin-right: 10px;
+            margin-left: 20px;
+        }
+        #r1:hover{
+            cursor: pointer;
+        }
+        #r2:hover{
+            cursor: pointer;
+        }
+        #r3:hover{
+            cursor: pointer;
+        }
+
+
+    </style> <!-- style for guest reviews-->
+    <style>
+        #contact-us-container{
+            position: absolute;
+            top: 4900px;
+            left: 0;
+            background-color: #eeeeed;
+            width: 100%;
+            height: 600px;
+        }
+        #contact-us-main{
+            position: absolute;
+            top: 100px;
+            left: 250px;
+            display: grid;
+            width:650px;
+            font-family: 'Source Sans Pro', sans-serif;
+
+            height: 100px;
+            text-align: center;
+            grid-template-rows: 50px 50px;
+            grid-template-columns: 200px 400px 200px;
+            grid-row-gap: 20px;
+            grid-column-gap: 40px;
+        }
+        #contact-us{
+            grid-area: 1/2/1/2;
+            text-align: center;
+            font-size: x-large;
+        }
+        #c1{
+            text-align: center;
+            grid-area: 2/1/2/2;
+            color: black;
+            font-style: italic;
+            text-decoration: none;
+        }
+        #c2{
+            text-align: center;
+            font-style: italic;
+            grid-area: 2/2/2/3;
+        }
+        #c3{
+            text-align: center;
+            font-style: italic;
+            grid-area: 2/3/2/3;
+        }
+
+        #contact-info{
+            display: grid;
+            position: absolute;
+            top: 270px;
+            left: 450px;
+            grid-template-columns: 250px 250px;
+            grid-template-rows: 35px 35px 120px 35px;
+            font-family: 'Source Sans Pro', sans-serif;
+            grid-row-gap: 10px;
+            grid-column-gap: 10px;
+        }
+        #name{
+            grid-area: 1/1/1/2;
+            border-width: 0;
+            padding: 10px;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        #email{
+            border-width: 0;
+            padding: 10px;
+            grid-area: 1/2/1/2;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        #subject{
+            grid-row: 2/2;
+            border-width: 0;
+            padding: 10px;
+            grid-column: 1/span 2;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        #message{
+            grid-row: 3/3;
+            padding: 10px;
+            border-width: 0;
+            grid-column: 1/span 2;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        #send{
+            border-width: 0;
+            grid-row: 4/4;
+            grid-column: 1/span 2;
+            border-color: black;
+            border-style: solid;
+            background-color: black;
+            color: white;
+            font-family: 'Source Sans Pro', sans-serif;
+
+            text-align: center;
+            padding: 8px;
+        }
+        #send:hover{
+            cursor: pointer;
+        }
+    </style> <!-- style for contact us-->
+    <style>
+        #social-icon-container{
+            display: grid;
+            grid-template-rows: 30px 30px 30px;
+            grid-template-columns: 30px;
+            position: fixed;
+            grid-row-gap: 35px;
+            right: 5px;
+            top:250px;
+            height: 200px;
+            width: 30px;
+        }
+        #tripadvisor{
+            grid-area: 1/1/2/1;
+            height: 30px;
+            width: 30px ;
+        }
+        #facebook{
+            grid-area: 2/1/2/1;
+            height: 30px;
+            width: 30px ;
+        }
+        #instagram{
+            grid-area: 3/1/3/1;
+            height: 30px;
+            width: 30px ;
+        }
+    </style> <!-- style for social icons-->
+</head>
+<body>
+    <div id="header1">
+        <span id="main-text">
+            This site was designed with the
+                <svg class="wix-logo" viewBox="0 0 28 10.89" alt="wix"><path d="M16.02.2c-.55.3-.76.78-.76 2.14a2.17 2.17 0 0 1 .7-.42
+                   3 3 0 0 0 .7-.4A1.62 1.62 0 0 0 17.22 0a3 3 0 0 0-1.18.2z" class="dot"></path>
+                    <path d="M12.77.52a2.12 2.12 0 0 0-.58 1l-1.5 5.8-1.3-4.75a4.06 4.06 0 0 0-.7-1.55 2.08 2.08 0 0
+                       0-2.9 0 4.06 4.06 0 0 0-.7 1.55L3.9 7.32l-1.5-5.8a2.12 2.12 0 0 0-.6-1A2.6 2.6 0 0 0 0 .02l2.9 10.83a3.53
+                       3.53 0 0 0 1.42-.17c.62-.33.92-.57 1.3-2 .33-1.33 1.26-5.2 1.35-5.47a.5.5 0 0 1 .34-.4.5.5 0 0 1 .4.5c.1.3
+                       1 4.2 1.4 5.5.4 1.5.7 1.7 1.3 2a3.53 3.53 0 0 0 1.4.2l2.8-11a2.6 2.6 0 0 0-1.82.53zm4.43 1.26a1.76 1.76
+                       0 0 1-.58.5c-.26.16-.52.26-.8.4a.82.82 0 0 0-.57.82v7.36a2.47 2.47 0 0 0 1.2-.15c.6-.3.75-.6.75-2V1.8zm7.16
+                       3.68L28 .06a3.22 3.22 0 0 0-2.3.42 8.67 8.67 0 0 0-1 1.24l-1.34 1.93a.3.3 0 0 1-.57 0l-1.4-1.93a8.67 8.67 0 0
+                       0-1-1.24 3.22 3.22 0 0 0-2.3-.43l3.6 5.4-3.7 5.4a3.54 3.54 0 0 0 2.32-.48 7.22 7.22 0 0 0 1-1.16l1.33-1.9a.3.3 0
+                       0 1 .57 0l1.37 2a8.2 8.2 0 0 0 1 1.2 3.47 3.47 0 0 0 2.33.5z"></path>
+                </svg>
+            <span style="padding-left: 3em">.com website builder.Create your website today.</span>
+            <label id="start-now">Start Now</label>
+        </span>
+        <hr id="line1">
+    </div>
+    <div id="main-menu">
+        <div id="menu">
+            <label hidden id="selected">home</label>
+            <label class="menu-items" id="home" onclick="home()">HOME</label>
+            <label class="menu-items" id="about" onclick="about()">ABOUT</label>
+            <label class="menu-items" id="rooms" onclick="rooms()">ROOMS</label>
+            <label class="menu-items" id="services" onclick="services()">SERVICES</label>
+            <label class="menu-items" id="gallery" onclick="gallery()">GALLERY</label>
+            <label class="menu-items" id="seedo" onclick="seedo()">SEE&DO</label>
+            <label class="menu-items" id="contact" onclick="contact()">CONTACT</label>
+            <button id="book-now">Book A Room</button>
+        </div>
+    </div>
+    <div id="ferofly">
+        <label id="ferofly-text1">Ferofly</label>
+        <label id="ferofly-text2">Magnify your journey</label>
+        <hr class="text-line" id="text-line1">
+        <hr class="text-line" id="text-line2">
+
+    </div>
+    <div id="background-image">
+        <img src="icons/background.png" alt="image" id="image">
+    </div>
+    <div id="date-body">
+        <div id="dates">
+            <label class="lbl" id="checkin-lbl">Check In</label>
+            <input type="date" class ="inputs" id="checkin">
+
+            <label class="lbl" id="checkout-lbl">Check Out</label>
+            <input type="date" class ="inputs" id="checkout">
+
+            <label class="lbl" id="adult-lbl">Adults</label>
+            <input type="number" class ="inputs" value="1" id="adults">
+
+            <label class="lbl" id="kids-lbl">Kids</label>
+            <input type="number" class ="inputs" value="0" id="kids">
+
+            <label id="search">Search</label>
+        </div>
+    </div>
+    <div id="main-para-body">
+        <div id="about-para">
+            <label id="about-lbl">ABOUT</label>
+            <p id="para">I'm a paragraph. Click here to add your own text and edit me. It’s easy.
+                Just click “Edit Text” or double click me to add your own content and make changes to the font.
+                Feel free to drag and drop me anywhere you like on your page.
+                I’m a great place for you to tell a story and let your users know a little more about you.
+            </p>
+        </div>
+    </div>
+    <div id="rooms-main">
+        <div id="room-img-main">
+            <img id="room-img" src="icons/our-rooms.png" alt="image"/>
+            <div id="img-para">
+                <label id="our-rooms">OUR ROOMS</label>
+                <p id="para-info">
+                    I'm a paragraph.
+                    Click here to add your own text and edit me.
+                    I’m a great place for you to tell a story and let your users know a little more about you.
+                </p>
+                <label id="book-a-room">Book A Room</label>
+
+            </div>
+        </div>
+    </div>
+    <div id="services-main-container">
+        <div id="services-main">
+            <label id="services-lbl">OUR SERVICES</label>
+            <img src="icons/breakfast.png" alt="image" id="breakfast"/>
+            <img src="icons/garden.png" alt="image" id="garden"/>
+            <img src="icons/pool.png" alt="image" id="pool"/>
+            <img src="icons/wifi.png" alt="image" id="wifi"/>
+            <img src="icons/housekeeping.png" alt="image" id="housekeeping"/>
+            <img src="icons/dining.png" alt="image" id="dining"/>
+
+            <label id="breakfast-lbl">Breakfast</label>
+            <label id="garden-lbl">Garden</label>
+            <label id="pool-lbl">Pool</label>
+            <label id="wifi-lbl">Free Wifi</label>
+            <label id="housekeeping-lbl">Daily Housekeeping</label>
+            <label id="dining-lbl">In-Room Dining Service</label>
+
+            <p id="breakfast-desc">I'm a paragraph. Click here to add your own text and edit me.</p>
+            <p id="garden-desc">I'm a paragraph. Click here to add your own text and edit me.</p>
+            <p id="pool-desc">I'm a paragraph. Click here to add your own text and edit me.</p>
+            <p id="wifi-desc">I'm a paragraph. Click here to add your own text and edit me.</p>
+            <p id="housekeeping-desc">I'm a paragraph. Click here to add your own text and edit me.</p>
+            <p id="dining-desc">I'm a paragraph. Click here to add your own text and edit me.</p>
+        </div>
+
+    </div>
+    <div id="gallery-main-container">
+        <div id="gallery-main">
+            <label id="gallery-lbl">GALLERY</label>
+            <img src="icons/gallery1.png" id="gallery-img1" alt="image"/>
+            <img src="icons/gallery2.png" id="gallery-img2" alt="image"/>
+            <img src="icons/gallery3.png" id="gallery-img3" alt="image"/>
+        </div>
+    </div>
+    <div id="things-to-do-container">
+        <div id="things-to-do-main">
+            <label id="things-to-do">THINGS TO DO</label>
+            <label id="Wineries-lbl">Wineries Tour</label>
+            <label id="Cultural-lbl">Cultural Sites</label>
+            <label id="Market-lbl">Market Tour</label>
+            <label id="Leisure-lbl">Leisure Activities</label>
+            <label id="Birds-lbl">Birds Safari</label>
+            <label id="Horse-lbl">Horse Riding</label>
+
+            <p id="Wineries-desc">I'm a paragraph. Click here to add your own text and edit me.</p>
+            <p id="Cultural-desc">I'm a paragraph. Click here to add your own text and edit me.</p>
+            <p id="Market-desc">I'm a paragraph. Click here to add your own text and edit me.</p>
+            <p id="Leisure-desc">I'm a paragraph. Click here to add your own text and edit me.</p>
+            <p id="Birds-desc">I'm a paragraph. Click here to add your own text and edit me.</p>
+            <p id="Horse-desc">I'm a paragraph. Click here to add your own text and edit me.</p>
+        </div>
+    </div>
+    <div id="guest-container">
+        <div id="guest-main">
+            <img src="icons/guest-review.png" alt="image" id="review-img">
+            <div id="review-body">
+                <label id="guest-review-lbl">GUEST REVIEW</label>
+                <img src="icons/quotes.png" alt="image" id="extra"/>
+                <p id="review-info">“I'm a paragraph.
+                    Click here to add your own text and edit me.
+                    I’m a great place for you to tell a story and let your users know a little more about you.”
+                </p>
+                <label id="r1" class="btns" onclick="change(event)"></label>
+                <label id="r2" class="btns" onclick="change(event)"></label>
+                <label id="r3" class="btns" onclick="change(event)"></label>
+            </div>
+        </div>
+    </div>
+    <div id="contact-us-container">
+        <div id="contact-us-main">
+            <label id="contact-us">CONTACT US</label>
+            <a id="c1" href="#">info@mysite.com</a>
+            <label id="c2">500 Terry Francois Street, San Francisco, CA 94158</label>
+            <label id="c3">Tel: 123-456-7890 </label>
+        </div>
+        <div id="contact-info">
+            <input type="text" placeholder="Name*" id="name"/>
+            <input type="email" placeholder="Email*" id="email"/>
+            <input type="text" placeholder="Subject" id="subject"/>
+            <textarea rows="10" cols="50" id="message">Message</textarea>
+            <label id="send">Send</label>
+        </div>
+    </div>
+    <div id="social-icon-container">
+        <img src="icons/tripadvisor.png" id="tripadvisor"/>
+        <img src="icons/facebook.png" id="facebook"/>
+        <img src="icons/instagram.png" id="instagram"/>
+    </div>
+    <script>
+        document.getElementById("header1").onmouseenter = () =>{
+            document.getElementById("start-now").style.backgroundColor = 'purple';document.getElementById("start-now").style.color = 'white'
+        };
+        document.getElementById("header1").onmouseleave = () =>{
+            document.getElementById("start-now").style.backgroundColor = 'white';document.getElementById("start-now").style.color = 'purple'
+        }
+    </script>
+    <script>
+        var c = 'r1';
+        var reviews = ['I\'m a paragraph.Click here to add your own text and edit me.'+
+        'I’m a great place for you to tell a story and let your users know a little more about you.',
+            '“I\'m a paragraph. Click here to add your own tdsfdsext and edit me.”',
+            '“I\'m a paragraph. Click here to add ydsfdsfour own text and edit me.”'];
+        function change(event){
+            document.getElementById(c).style.opacity='1';
+            let review = document.getElementById('review-info');
+            let id = event.target.id;
+            console.log(id);
+            let i = parseInt(id[1]);
+            c= id;
+            review.innerText = reviews[i-1];
+            document.getElementById(id).style.opacity = '0.5';
+        }
+    </script>
+    <script>
+        function home(){
+            window.scrollTo(0,0)
+        }
+        function about(){
+            window.scrollTo(0,900)
+        }
+        function rooms(){
+            window.scrollTo(0,1300)
+        }
+        function services(){
+            window.scrollTo(0,2000);
+        }
+        function gallery(){
+            window.scrollTo(0,2800)
+        }
+        function seedo(){
+            window.scrollTo(0,3550)
+        }
+        function contact(){
+            window.scrollTo(0,4750)
+        }
+        document.addEventListener("scroll",()=>{
+            let y = window.scrollY;
+            if ((0<= y) && (y<= 890)){
+                console.log(y,1);
+                document.getElementById(document.getElementById('selected').innerText).style.color='#d1d1d0';
+                document.getElementById('selected').innerText = 'home';
+                document.getElementById('home').style.color = 'darkgray';
+
+            }
+            else if((890< y)&& (y<=1290)){
+                console.log(y,2);
+                document.getElementById(document.getElementById('selected').innerText).style.color='#d1d1d0';
+                document.getElementById('selected').innerText = 'about';
+                document.getElementById('about').style.color = 'darkgray';
+
+            }
+            else if((1290< y)&& (y<=1990)){
+                console.log(y,3);
+                document.getElementById(document.getElementById('selected').innerText).style.color='#d1d1d0';
+                document.getElementById('selected').innerText = 'rooms';
+                document.getElementById('rooms').style.color = 'darkgray';
+
+            }
+            else if((1990<y) && (y<=2790)){
+                console.log(y);
+                document.getElementById(document.getElementById('selected').innerText).style.color='#d1d1d0';
+                document.getElementById('selected').innerText = 'services';
+                document.getElementById('services').style.color = 'darkgray';
+
+            }
+            else if ((2790<y )&& (y<=3390)){
+                console.log(y,4);
+                document.getElementById(document.getElementById('selected').innerText).style.color='#d1d1d0';
+                document.getElementById('selected').innerText = 'gallery';
+                document.getElementById('gallery').style.color = 'darkgray';
+
+            }
+            else if((3390< y)&& (y<= 4590)){
+                console.log(y,5);
+                document.getElementById(document.getElementById('selected').innerText).style.color='#d1d1d0';
+                document.getElementById('selected').innerText = 'seedo';
+                document.getElementById('seedo').style.color = 'darkgray';
+            }
+            else if (4590< y){
+                console.log(y);
+                document.getElementById(document.getElementById('selected').innerText).style.color='#d1d1d0';
+                document.getElementById('selected').innerText = 'contact';
+                document.getElementById('contact').style.color = 'darkgray';
+
+            }
+        })
+    </script>
+
+</body>
+</html>
